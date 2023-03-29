@@ -4,12 +4,19 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 
+import static utilities.AuthenticationMedunna.generateToken;
+
 public class MedunnaBaseUrl {
+
+
     public static RequestSpecification spec;
 
-    public static  void medunnasetUp(){
-        spec= new RequestSpecBuilder().
+    public static void medunnaSetUp(){
+
+        spec = new RequestSpecBuilder().
                 setContentType(ContentType.JSON).
-                setBaseUri("https://medunna.com").build();
+                addHeader("Authorization","Bearer "+generateToken()).setBaseUri("https://medunna.com").build();
+
+
     }
 }
