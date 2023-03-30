@@ -8,9 +8,8 @@ import static base_urls.MedunnaBaseUrl.medunnaSetUp;
 
 public class Hooks {
 
-    @Before("@TC01_Api")
+    @Before()
     public void beforeApi(){
         medunnaSetUp();
     }
-
 }

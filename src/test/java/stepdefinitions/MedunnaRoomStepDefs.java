@@ -15,7 +15,7 @@ import static org.junit.Assert.assertTrue;
 public class MedunnaRoomStepDefs {
     MedunnaHomePage medunnaHomePage = new MedunnaHomePage();
     MedunnaRoomPage medunnaRoomPage = new MedunnaRoomPage();
-    public  static int roomNumber = Faker.instance().number().numberBetween(1000,1000000);
+    public static int roomNumber = Faker.instance().number().numberBetween(1000,1000000);
     public static String firstId;
 
     @When("click on Items&Titles")
