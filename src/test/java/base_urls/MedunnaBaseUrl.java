@@ -15,7 +15,9 @@ public class MedunnaBaseUrl {
 
         spec = new RequestSpecBuilder().
                 setContentType(ContentType.JSON).
-                addHeader("Authorization","Bearer "+generateToken()).setBaseUri("https://medunna.com").build();
+
+                addHeader("Authorization","Bearer "+generateToken()).
+                setBaseUri("https://medunna.com").build();
 
 
     }

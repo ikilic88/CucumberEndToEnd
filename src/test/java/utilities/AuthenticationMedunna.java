@@ -5,11 +5,12 @@ import io.restassured.response.Response;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
+
 
 import static io.restassured.RestAssured.given;
 
 public class AuthenticationMedunna {
+
     public static String generateToken() {
 
         Map<String, Object> bodyMap = new HashMap<>();
@@ -22,3 +23,4 @@ public class AuthenticationMedunna {
         return response.jsonPath().getString("id_token");
     }
 }
+
